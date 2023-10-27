@@ -1,6 +1,6 @@
 # 1. Install the required packages
  
-```python 
+```python  
 
 ```
 # 2. Import required packages
