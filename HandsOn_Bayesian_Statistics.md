@@ -19,17 +19,28 @@ z,hz,hzerr=np.loadtxt("https://raw.githubusercontent.com/darshanbeniwal/Data_to_
 # 4. Define Likelihood Function
 
 ```python
- 
+ def likelihood(theta, z,hz,hzerr):
+    h0, om= theta
+    model = h0*np.sqrt(om*(1+z)**3+1-om)
+    return (np.sum(-0.5*((hz-model)/hzerr)**2-0.5*np.log(2*np.pi*hzerr**2)))
 ```
 # 5. Define Prior Function
 
 ```python
- 
+ def prior(theta):
+    h0, om= theta
+    if 50.0< h0 < 80 and 0.15 < om < 0.55:
+        return np.log10(1.0 / ((80 - 50.0) * (0.55 - 0.15)))
+    return -np.inf
 ```
 # 6. Define Posterior Function
 
 ```python
- 
+ def posterior(theta, z,hz,hzerr):
+    lp = prior(theta)
+    if not np.isfinite(lp):
+        return -np.inf
+    return (lp + likelihood(theta, z,hz,hzerr))
 ```
 # 7. Define Metropolis-Hastings Algorithm Function
 
