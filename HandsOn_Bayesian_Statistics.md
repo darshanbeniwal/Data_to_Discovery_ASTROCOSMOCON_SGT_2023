@@ -6,7 +6,10 @@
 # 2. Import required packages
 
 ```python
-
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm,uniform
+import corner
 ```
 # 3. Load Mock data from GitHub
 
