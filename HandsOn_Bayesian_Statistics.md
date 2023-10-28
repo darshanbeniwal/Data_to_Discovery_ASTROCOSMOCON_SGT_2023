@@ -69,7 +69,9 @@ nsteps=100000
 # 9. Run Metropolis-Hastings Algorithm
 
 ```python
- 
+result = Metropolis_Hastings(initials, nsteps)
+samples_MH=np.array(result)
+#will take around 26 sec
 ```
 # 10. Plot the chains
 
