@@ -14,7 +14,7 @@ import corner
 # 3. Load Mock data from GitHub
 
 ```python
- z,hz,hzerr=np.loadtxt("https://raw.githubusercontent.com/darshanbeniwal/Data_to_Discovery_ASTROCOSMOCON_SGT_2023/main/Hubble_30.txt",unpack=True)
+z,hz,hzerr=np.loadtxt("https://raw.githubusercontent.com/darshanbeniwal/Data_to_Discovery_ASTROCOSMOCON_SGT_2023/main/Hubble_30.txt",unpack=True)
 ```
 # 4. Define Likelihood Function
 
