@@ -118,7 +118,20 @@ axes[1].set_ylabel("$\Omega_{m0}$")
 # 13. Find Best Fit value of parameters
 
 ```python
+h0_chain=samples_MH_b[:,0]
+om_chain=samples_MH_b[:,1]
+#Estimate the mean of a and b chains
+h0_best = np.mean(h0_chain)
+om_best = np.mean(om_chain)
 
+#Estimate the Std. Deviation of a and b chains
+
+sig_h0 = np.std(h0_chain)
+sig_om = np.std(om_chain)
+
+print("Best fit values:")
+print("H0:",h0_best, "Sig_h0:", sig_h0)
+print("Om:",om_best, "Sig_om:", sig_om)
 ```
 # 14. Show Parameter Histograms
 
