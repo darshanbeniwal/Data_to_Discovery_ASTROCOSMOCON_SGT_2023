@@ -1,7 +1,7 @@
 # 1. Install the required packages
  
 ```python  
-
+!pip install corner
 ```
 # 2. Import required packages
 
