@@ -91,7 +91,9 @@ axes[1].set_ylabel("$\Omega_{m0}$")
 
 ```python
 
-
+nburn_in=1000
+result_b = result[nburn_in:]
+samples_MH_b=np.array(result_b)
 ```
 
 ```python
