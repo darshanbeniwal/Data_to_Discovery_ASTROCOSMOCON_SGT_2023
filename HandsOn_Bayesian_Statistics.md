@@ -61,7 +61,10 @@ def Metropolis_Hastings(parameter_init, nsteps):
 # 8. Define Initial Seeds, Number of Steps
 
 ```python
- 
+h0_ini,om_ini=60,0.25
+initials=h0_ini,om_ini
+ndim=2
+nsteps=100000
 ```
 # 9. Run Metropolis-Hastings Algorithm
 
